@@ -11,15 +11,15 @@ let new_game = document.querySelector('.new-game');
 let myScore = 0;
 let comScore = 0;
 
-let match_draw = new Audio('/media/match_draw.mp3');
-let win_sound = new Audio('/media/sinister-laugh-140131.mp3');
-let lost_sound = new Audio('/media/aayein-made-with-Voicemod.mp3');
+let match_draw = new Audio('media/match_draw.mp3');
+let win_sound = new Audio('media/sinister-laugh-140131.mp3');
+let lost_sound = new Audio('media/aayein-made-with-Voicemod.mp3');
 
 // Define the choices and their corresponding image sources
 const choices = {
-    paper: "/media/paper.png",
-    rock: "/media/rock.png",
-    scissors: "/media/scissors.png"
+    paper: "media/paper.png",
+    rock: "media/rock.png",
+    scissors: "media/scissors.png"
 };
 
 // Function to get a random choice for the computer
