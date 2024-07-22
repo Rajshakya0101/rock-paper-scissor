@@ -49,7 +49,7 @@ const blast = () => {
       
         confetti({
           ...defaults,
-          particleCount: 20,
+          particleCount: 100,
           scalar: 2,
           shapes: ["emoji"],
           shapeOptions: {
