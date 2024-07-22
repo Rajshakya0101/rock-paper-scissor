@@ -47,6 +47,7 @@ function determineWinner(playerChoice, computerChoice) {
         match_draw.pause();
         lost_sound.pause();
         win_sound.play();
+        blast();
         my_score.innerText = myScore;
         return "You win!";
     }
@@ -85,3 +86,39 @@ scissor.addEventListener("click", () => {
 new_game.addEventListener("click", () => {
     location.reload();
 })
+
+const blast = () => {
+    const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+      
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 100,
+          scalar: 1.2,
+          shapes: ["circle", "square"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+      
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: ["😂", "😂", "😂"],
+            },
+          },
+        });
+      }
+      
+      setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+}
